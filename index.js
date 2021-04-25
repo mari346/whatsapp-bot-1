@@ -24,7 +24,7 @@ const nocache = (module, call = () => { }) => {
  * @param {string} module Module name or path
  */
 const uncache = (module = '.') => {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve, rejlect) => {
         try {
             delete require.cache[require.resolve(module)]
             resolve()
